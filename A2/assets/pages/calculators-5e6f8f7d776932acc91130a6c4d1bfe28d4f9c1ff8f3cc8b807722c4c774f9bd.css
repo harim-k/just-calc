@@ -1,0 +1,25 @@
+.label {
+    padding: .2em .5em .2em
+}
+
+.forum-box .forum-heading .label {
+    margin-top: 4px
+}
+
+.middle-font-size {
+    font-size: 1.2em
+}
+
+.formula-note .mjx-chtml {
+    text-align: left !important
+}
+
+hr {
+    border-top: 1px solid #a7a8af !important;
+    padding-bottom: 10px
+}
+
+.forum-box>.panel-body {
+    padding-top: 10px;
+    padding-bottom: 10px
+}

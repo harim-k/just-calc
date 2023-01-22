@@ -1,0 +1,70 @@
+label {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 7px
+}
+
+.fin-sav-bal {
+    font-size: 18px;
+    line-height: 1.5
+}
+
+.form-control.input-lg {
+    border-radius: 0;
+    border-color: #a7a8af !important
+}
+
+.input-group-addon.input-lg {
+    border-radius: 0;
+    border-color: #a7a8af !important
+}
+
+.input-group>.form-control.input-lg {
+    padding-left: 10px;
+    padding-right: 5px
+}
+
+.input-group>.input-group-addon {
+    padding-left: 10px;
+    padding-right: 16px
+}
+
+.no-border-right {
+    border-right: none
+}
+
+.padding-20 {
+    padding: 20px !important
+}
+
+.calc-left-side-background {
+    background-color: #f0f0f2
+}
+
+.no-radius {
+    border-radius: 0 !important
+}
+
+a.link-action {
+    font-size: 18px;
+    bottom: 0
+}
+
+.btn.dropdown-toggle.btn-default {
+    height: 46px;
+    font-size: 18px
+}
+
+ul.dropdown-menu.inner {
+    font-size: 16px
+}
+
+.text-big {
+    font-size: 50px
+}
+
+div.form-group.error input.form-control,
+div.form-group.error span.input-group-addon {
+    border-color: red !important
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Compound Interest Calculator</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Compound Interest Calculator</h1>
+    <form>
+      Principal: <input type="text" id="principal"><br>
+      Interest Rate (%): <input type="text" id="rate"><br>
+      Years: <input type="text" id="years"><br>
+      <input type="button" value="Calculate" onclick="calculate()">
+    </form>
+    <div id="chart"></div>
+    <table id="table">
+      <tr>
+        <th>Year</th>
+        <th>Value</th>
+      </tr>
+    </table>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+      function calculate() {
+        var principal = document.getElementById("principal").value;
+        var rate = document.getElementById("rate").value / 100;
+        var years = document.getElementById("years").value;
+        var data = [];
+        var table = document.getElementById("table");
+        table.innerHTML = "<tr><th>Year</th><th>Value</th></tr>";
+        for (var i = 0; i <= years; i++) {
+          var value = principal * Math.pow(1 + rate, i);
+          data.push(value);
+          var row = table.insertRow(-1);
+          var yearCell = row.insertCell(0);
+          var valueCell = row.insertCell(1);
+          yearCell.innerHTML = i;
+          valueCell.innerHTML = "$" + value.toFixed(2);
+        }
+        var layout = {
+          title: 'Compound Interest',
+          xaxis: {
+            title: 'Years'
+          },
+          yaxis: {
+            title: 'Value'
+          }
+        };
+        Plotly.newPlot('chart', [{y: data, type: 'line'}], layout);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Compound Interest Calculator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    input, label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Compound Interest Calculator</h1>
+
+  <form>
+    <label for="principal">Principal amount:</label>
+    <input type="number" id="principal" value="1000">
+
+    <label for="rate">Rate of interest:</label>
+    <input type="number" id="rate" value="5">
+
+    <label for="time">Time in years:</label>
+    <input type="number" id="time" value="1">
+
+    <button type="button" onclick="calculate()">Calculate</button>
+  </form>
+
+  <p>
+    <strong>Compound interest:</strong>
+    <span id="result"></span>
+  </p>
+
+  <script>
+    function calculate() {
+      // get the values from the input fields
+      var principal = document.getElementById('principal').value;
+      var rate = document.getElementById('rate').value;
+      var time = document.getElementById('time').value;
+
+      // calculate the compound interest
+      var interest = principal * Math.pow(1 + (rate / 100), time);
+
+      // display the result
+      document.getElementById('result').innerHTML = interest.toFixed(2);
+    }
+  </script>
+</body>
+</html>
